@@ -1,0 +1,28 @@
+<!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'cocktails.jpg' %>');">
+  <div class="container">
+    <h1>Le Wagon's cocktails</h1>
+    <p>Awesome beverages for developers nightlife</p>
+    <%= link_to "See all", cocktails_path, class: "btn btn-flat" %>
+    <%= link_to "Add one", new_cocktail_path, class: "btn btn-flat" %>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3 p-3">
+        <%= link_to cocktail_path(cocktail), class: 'card-link' do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+            <div class="card-description">
+              <h2><%= cocktail.name %></h2>
+            </div>
+            <div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'cocktails.jpg' %>');">
+  <div class="container">
+    <h1>Thank's for sharing your Cocktail with us !</h1>
+    <p>You've just added : <%= @cocktail.name %> </p>
+    <%= link_to "See all", cocktails_path, class: "btn btn-flat" %>
+    <%= link_to "Add one", new_cocktail_path, class: "btn btn-flat" %>
+  </div>
+</div>
